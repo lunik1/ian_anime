@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-09-22 Tue 21:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Is Ian Horner right about Anime?</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Corin Hoad" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Is Ian Horner right about Anime?</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgcf45428">1. Hypothesis</a></li>
+<li><a href="#org8a39cb9">2. TLDR (Abstract)</a></li>
+<li><a href="#org46b2a71">3. Methodology</a></li>
+<li><a href="#org58d9cdd">4. Stuff I couldn&rsquo;t be bothered to do</a></li>
+<li><a href="#orge5110bb">5. Conclusion</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcf45428" class="outline-2">
+<h2 id="orgcf45428"><span class="section-number-2">1</span> Hypothesis</h2>
+<div class="outline-text-2" id="text-1">
+<blockquote>
+<p>
+Wait, does Anime only get good for a few years around the release of a new form
+of physical media that needs content to sell the players?
+</p>
+
+<p>
+LaserDisc &gt; VHS &gt; DVD &gt; BluRay <br />
+&#x2014; <a href="https://mastodon.social/@ihorner/104876938523193748">@ihorner@mastodon.social</a>
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org8a39cb9" class="outline-2">
+<h2 id="org8a39cb9"><span class="section-number-2">2</span> TLDR (Abstract)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+idk. not really.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org46b2a71" class="outline-2">
+<h2 id="org46b2a71"><span class="section-number-2">3</span> Methodology</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+To answer this question we need to decide what anime &ldquo;getting good&rdquo; entails. One
+of the largest anime communities online, MyAnimeList, allows its users to rate
+animes on a 1-10 scale. By observing how the ratings of anime evolve over time
+we can try and spot any relation to the releases of major home video formats.
+</p>
+
+<p>
+MyAnimeList also has a freely available download on Kaggle of its user data and
+I defintely didn&rsquo;t just work backwards from that.
+</p>
+
+<p>
+First let&rsquo;s do our imports.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #fb4934; font-style: italic;">import</span> ast
+<span style="color: #fb4934; font-style: italic;">import</span> datetime
+<span style="color: #fb4934; font-style: italic;">import</span> pandas <span style="color: #fb4934; font-style: italic;">as</span> pd
+<span style="color: #fb4934; font-style: italic;">import</span> matplotlib
+<span style="color: #fb4934; font-style: italic;">import</span> matplotlib.pyplot <span style="color: #fb4934; font-style: italic;">as</span> plt
+
+matplotlib.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">use</span>(<span style="color: #b8bb26;">"Agg"</span>)
+plt.<span style="color: #d3869b; font-style: italic;">style</span>.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">use</span>(<span style="color: #b8bb26;">"ggplot"</span>)
+</pre>
+</div>
+
+<p>
+Load in the <a href="https://www.kaggle.com/azathoth42/myanimelist">MyAnimeList data from Kaggle</a>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #8ec07c;">df</span> <span style="color: #fb4934; font-style: italic;">=</span> pd.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">read_csv</span>(<span style="color: #b8bb26;">"data/AnimeList.csv"</span>, <span style="color: #8ec07c; font-weight: bold;">sep</span><span style="color: #fb4934; font-style: italic;">=</span><span style="color: #b8bb26;">","</span>, <span style="color: #8ec07c; font-weight: bold;">parse_dates</span><span style="color: #fb4934; font-style: italic;">=</span>[])
+<span style="color: #fe8019; font-weight: bold;">len</span>(df)
+</pre>
+</div>
+
+<pre class="example">
+14478
+</pre>
+
+
+<p>
+To ensure that we aren&rsquo;t including anime whose scores haven&rsquo;t been influenced by
+a handful of enthusiasts/detractors, we require at least 100 user ratings.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #8ec07c;">min_ratings</span> <span style="color: #fb4934; font-style: italic;">=</span> <span style="color: #d3869b;">100</span>
+
+<span style="color: #8ec07c;">df</span> <span style="color: #fb4934; font-style: italic;">=</span> df[df[<span style="color: #b8bb26;">"scored_by"</span>] <span style="color: #fb4934; font-style: italic;">&gt;=</span> min_ratings]
+<span style="color: #fe8019; font-weight: bold;">len</span>(df)
+</pre>
+</div>
+
+<pre class="example">
+9689
+</pre>
+
+
+<p>
+Now lets remove any anime that don&rsquo;t have any episodes&#x2026; somehow.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #8ec07c;">df</span> <span style="color: #fb4934; font-style: italic;">=</span> df[df[<span style="color: #b8bb26;">"episodes"</span>] <span style="color: #fb4934; font-style: italic;">&gt;</span> <span style="color: #d3869b;">0</span>]
+<span style="color: #fe8019; font-weight: bold;">len</span>(df)
+</pre>
+</div>
+
+<pre class="example">
+9583
+</pre>
+
+
+<p>
+Now we look at airdates. These come in a weird format: there is one entry that
+contains a dict as a string with <code>from</code> and <code>to</code> dates. To extract <code>from</code> we just
+eval this directly and look up the <code>from</code> key; this is a very bad idea and if
+any potential employers are reading this I promise I wound never do this.
+Please hire me.
+</p>
+
+<p>
+We then restrict our animes to those that first aired between 1973-21-21 (five
+years before the LaserDisc came to market) and 2018-01-01 (~6 months before
+this data was published, under the assumption that new releases will have
+an inflated rating). Then we convert these into actual <code>datetime</code> objects.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #8ec07c;">early_cutoff</span> <span style="color: #fb4934; font-style: italic;">=</span> <span style="color: #b8bb26;">"1973-21-11"</span>
+<span style="color: #8ec07c;">late_cutoff</span> <span style="color: #fb4934; font-style: italic;">=</span> <span style="color: #b8bb26;">"2018-01-01"</span>
+
+df[<span style="color: #b8bb26;">"start_date"</span>] <span style="color: #fb4934; font-style: italic;">=</span> df[<span style="color: #b8bb26;">"aired"</span>].<span style="color: #fabd2f; font-weight: bold; font-style: italic;">map</span>(<span style="color: #fb4934; font-style: italic;">lambda</span> s: ast.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">literal_eval</span>(s)[<span style="color: #b8bb26;">"from"</span>])
+<span style="color: #8ec07c;">df</span> <span style="color: #fb4934; font-style: italic;">=</span> df.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">dropna</span>(<span style="color: #8ec07c; font-weight: bold;">subset</span><span style="color: #fb4934; font-style: italic;">=</span>[<span style="color: #b8bb26;">"start_date"</span>])
+<span style="color: #8ec07c;">df</span> <span style="color: #fb4934; font-style: italic;">=</span> df[(df[<span style="color: #b8bb26;">"start_date"</span>] <span style="color: #fb4934; font-style: italic;">&gt;</span> early_cutoff) <span style="color: #fb4934; font-style: italic;">&amp;</span> (df[<span style="color: #b8bb26;">"start_date"</span>] <span style="color: #fb4934; font-style: italic;">&lt;</span> late_cutoff)]
+df[<span style="color: #b8bb26;">"start_date"</span>] <span style="color: #fb4934; font-style: italic;">=</span> pd.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">to_datetime</span>(df[<span style="color: #b8bb26;">"start_date"</span>]).<span style="color: #fabd2f; font-weight: bold; font-style: italic;">sort_values</span>()
+<span style="color: #fe8019; font-weight: bold;">len</span>(df)
+</pre>
+</div>
+
+<pre class="example">
+8817
+</pre>
+
+
+<p>
+Now let&rsquo;s plot these anime&rsquo;s ratings against their release date and see
+what we get.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">figure</span>()
+df.<span style="color: #d3869b; font-style: italic;">plot</span>.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">scatter</span>(<span style="color: #8ec07c; font-weight: bold;">x</span><span style="color: #fb4934; font-style: italic;">=</span><span style="color: #b8bb26;">"start_date"</span>, <span style="color: #8ec07c; font-weight: bold;">y</span><span style="color: #fb4934; font-style: italic;">=</span><span style="color: #b8bb26;">"score"</span>)
+
+<span style="color: #8ec07c;">fn</span> <span style="color: #fb4934; font-style: italic;">=</span> <span style="color: #b8bb26;">"plots/rating.png"</span>
+plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">savefig</span>(fn)
+fn
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="plots/rating.png" alt="rating.png" />
+</p>
+</div>
+
+<p>
+Well that sure is a giant, indecipherable blob. Maybe a rolling average with a 1y window will help.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #928374; font-style: italic;"># we have to use 365d because a year isn't a fixed amount of time</span>
+<span style="color: #928374; font-style: italic;"># (but we pretend a day is I guess)</span>
+<span style="color: #8ec07c;">window_size</span> <span style="color: #fb4934; font-style: italic;">=</span> <span style="color: #b8bb26;">"365d"</span>
+df[<span style="color: #b8bb26;">"av_score"</span>] <span style="color: #fb4934; font-style: italic;">=</span> (
+    df.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">sort_values</span>(<span style="color: #b8bb26;">"start_date"</span>)[[<span style="color: #b8bb26;">"start_date"</span>, <span style="color: #b8bb26;">"score"</span>]]
+    .<span style="color: #fabd2f; font-weight: bold; font-style: italic;">rolling</span>(window_size, <span style="color: #8ec07c; font-weight: bold;">on</span><span style="color: #fb4934; font-style: italic;">=</span><span style="color: #b8bb26;">"start_date"</span>)
+    .<span style="color: #fabd2f; font-weight: bold; font-style: italic;">mean</span>()[<span style="color: #b8bb26;">"score"</span>]
+)
+
+plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">figure</span>()
+df.<span style="color: #d3869b; font-style: italic;">plot</span>.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">scatter</span>(<span style="color: #8ec07c; font-weight: bold;">x</span><span style="color: #fb4934; font-style: italic;">=</span><span style="color: #b8bb26;">"start_date"</span>, <span style="color: #8ec07c; font-weight: bold;">y</span><span style="color: #fb4934; font-style: italic;">=</span><span style="color: #b8bb26;">"av_score"</span>)
+
+<span style="color: #8ec07c;">fn</span> <span style="color: #fb4934; font-style: italic;">=</span> <span style="color: #b8bb26;">"plots/average_rating.png"</span>
+plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">savefig</span>(fn)
+fn
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="plots/average_rating.png" alt="average_rating.png" />
+</p>
+</div>
+
+<p>
+Much clearer, we can make out some trends.
+</p>
+
+<p>
+Now let&rsquo;s just mark on the releases of new forms of physical media<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>:
+</p>
+<ul class="org-ul">
+<li>LaserDisc (1978-12-11)</li>
+<li>VHS (1976-09-09)</li>
+<li>DVD (1996-11-20)</li>
+<li>BluRay (2006-06-20)</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #8ec07c;">laserdisc</span> <span style="color: #fb4934; font-style: italic;">=</span> datetime.<span style="color: #d3869b; font-style: italic;">datetime</span>.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">strptime</span>(<span style="color: #b8bb26;">"1978-12-11"</span>, <span style="color: #b8bb26;">"%Y-%m-%d"</span>)
+<span style="color: #8ec07c;">vhs</span> <span style="color: #fb4934; font-style: italic;">=</span> datetime.<span style="color: #d3869b; font-style: italic;">datetime</span>.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">strptime</span>(<span style="color: #b8bb26;">"1976-09-09"</span>, <span style="color: #b8bb26;">"%Y-%m-%d"</span>)
+<span style="color: #8ec07c;">dvd</span> <span style="color: #fb4934; font-style: italic;">=</span> datetime.<span style="color: #d3869b; font-style: italic;">datetime</span>.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">strptime</span>(<span style="color: #b8bb26;">"1996-11-20"</span>, <span style="color: #b8bb26;">"%Y-%m-%d"</span>)
+<span style="color: #8ec07c;">bluray</span> <span style="color: #fb4934; font-style: italic;">=</span> datetime.<span style="color: #d3869b; font-style: italic;">datetime</span>.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">strptime</span>(<span style="color: #b8bb26;">"2006-06-20"</span>, <span style="color: #b8bb26;">"%Y-%m-%d"</span>)
+
+plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">axvline</span>(<span style="color: #8ec07c; font-weight: bold;">x</span><span style="color: #fb4934; font-style: italic;">=</span>laserdisc)
+plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">axvline</span>(<span style="color: #8ec07c; font-weight: bold;">x</span><span style="color: #fb4934; font-style: italic;">=</span>vhs)
+plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">axvline</span>(<span style="color: #8ec07c; font-weight: bold;">x</span><span style="color: #fb4934; font-style: italic;">=</span>dvd)
+plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">axvline</span>(<span style="color: #8ec07c; font-weight: bold;">x</span><span style="color: #fb4934; font-style: italic;">=</span>bluray)
+
+<span style="color: #8ec07c;">fn</span> <span style="color: #fb4934; font-style: italic;">=</span> <span style="color: #b8bb26;">"plots/average_rating_withlines.png"</span>
+plt.<span style="color: #fabd2f; font-weight: bold; font-style: italic;">savefig</span>(fn)
+fn
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="plots/average_rating_withlines.png" alt="average_rating_withlines.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org58d9cdd" class="outline-2">
+<h2 id="org58d9cdd"><span class="section-number-2">4</span> Stuff I couldn&rsquo;t be bothered to do</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Weight the rolling average according to how many ratings a series received</li>
+<li>Take into account that some anime span literal decades so it isn&rsquo;t really
+fair to condense their rating (which is for the whole series) down to the
+instant of their first air date.</li>
+<li>Really justify any of the decisions I have made at all</li>
+<li>This analysis kinda sucks</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orge5110bb" class="outline-2">
+<h2 id="orge5110bb"><span class="section-number-2">5</span> Conclusion</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+The only physical media release that clearly corresponds with the hypothesised
+pattern is DVD: after a slump the user ratings rebound very shorty after its
+introduction to the market. The same may be true for LaserDisc, but the data is
+much sparser so it is harder to be conclusive. User ratings rise after the
+release of Blu-ray, but they were increasing anyway. VHS ruined anime.
+</p>
+
+<p>
+Beyond this, there are periods where anime gets good for reasons seemingly
+unconnected to the release of a new dominant physical media standard.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">my
+source is wikipedia dot com</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Corin Hoad</p>
+<p class="date">Created: 2020-09-22 Tue 21:30</p>
+</div>
+</body>
+</html>
